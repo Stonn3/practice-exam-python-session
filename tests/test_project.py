@@ -1,3 +1,12 @@
+import os
+import tempfile
+from datetime import datetime, timedelta
+from models.user import User
+from database.database_manager import DatabaseManager
+from controllers.project_controller import ProjectController
+from models.project import Project
+from controllers.task_controller import TaskController
+
 class TestProjectController:
     """Тесты для ProjectController"""
 
@@ -137,4 +146,4 @@ class TestProjectController:
         progress = self.controller.get_project_progress(project_id)
         assert isinstance(progress, float)
         assert 0 <= progress <= 100
-
+        

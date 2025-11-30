@@ -11,7 +11,10 @@ sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 from controllers.task_controller import TaskController
 from controllers.project_controller import ProjectController
 from controllers.user_controller import UserController
-
+from database.database_manager import DatabaseManager
+from models.task import Task
+from models.project import Project
+from models.user import User
 
 class TestTaskController:
     """Тесты для TaskController"""
